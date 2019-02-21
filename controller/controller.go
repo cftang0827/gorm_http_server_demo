@@ -114,7 +114,6 @@ func UpdateUser(w http.ResponseWriter, req *http.Request) {
 			}
 		}
 	}
-
 	returnValue = user.Update()
 	jsonEncode, _ := json.Marshal(returnValue)
 	fmt.Fprintf(w, string(jsonEncode))
@@ -138,7 +137,6 @@ func DeleteUser(w http.ResponseWriter, req *http.Request) {
 
 	user := model.Gousers{}
 	user.Userid = req.FormValue("userid")
-
 	returnValue = user.Delete()
 	jsonEncode, _ := json.Marshal(returnValue)
 	fmt.Fprintf(w, string(jsonEncode))

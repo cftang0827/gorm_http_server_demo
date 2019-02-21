@@ -10,12 +10,8 @@ import (
 
 func main() {
 	mux := http.NewServeMux()
-	// db := model.Init()
-	// defer db.Close()
 	fmt.Println("Start server, binding port 8080 ...")
-
 	fmt.Println("Test gorm ....")
-
 	router.Route(mux)
 	http.ListenAndServe(":8080", mux)
 }

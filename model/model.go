@@ -15,8 +15,6 @@ type Gousers struct {
 	Age    int64
 }
 
-// var db *gorm.DB
-// var err error
 var db, err = gorm.Open("mysql", "test2:test2@tcp(192.168.79.11:41063)/cv?charset=utf8&parseTime=True&loc=Local")
 
 // Init ...
